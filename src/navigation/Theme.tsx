@@ -2,6 +2,7 @@ import {useColorScheme} from 'react-native';
 import {Colors} from '../constants/Colors';
 // import { useAppSelector } from "../redux/reduxHook";
 // import { selectTheme } from "../redux/reducers/themeSlice";
+import {ColorSchemeName} from 'react-native';
 
 interface ThemeColors {
   background: string;

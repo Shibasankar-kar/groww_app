@@ -2,8 +2,8 @@ import {View, Text} from 'react-native';
 import React from 'react';
 import {NavigationContainer, DefaultTheme} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {useCustomTheme} from './Theme';
 import {navigationRef} from '../utils/NavigationUtil';
-import { useCustomTheme } from './Theme';
 import MainNavigator from './MainNavigator';
 
 const Stack = createNativeStackNavigator();
@@ -14,7 +14,7 @@ const Navigation: React.FC = () => {
     ...DefaultTheme,
     colors: {
       ...DefaultTheme.colors,
-      background: theme.colors.background,
+      background: theme.colors.background,  
       text: theme.colors.text,
       card: theme.colors.card,
       border: theme.colors.border,
