@@ -1,27 +1,20 @@
 import {StyleSheet, Text, View} from 'react-native';
-import React, { FC } from 'react';
+import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import LoginScreen from '../screens/auth/LoginScreen';
 import HomeScreen from '../screens/dashboard/HomeScreen';
 import EmailScreen from '../screens/auth/EmailScreen';
-import {mergedStack} from './ScreenCollection';
 
 const Stack = createNativeStackNavigator();
 
-const MainNavigator:FC = () => {
+const MainNavigator = () => {
   return (
     <Stack.Navigator
       initialRouteName="LoginScreen"
       screenOptions={() => ({headerShown: false})}>
-      {mergedStack.map((item, index) => {
-        return (
-          <Stack.Screen
-            key={index}
-            name={item.name}
-            component={item.component}
-          />
-        );
-      })}
+      <Stack.Screen name="LoginScreen" component={LoginScreen} />
+      <Stack.Screen name="HomeScreen" component={HomeScreen} />
+      <Stack.Screen name="EmailScreen" component={EmailScreen} />
     </Stack.Navigator>
   );
 };

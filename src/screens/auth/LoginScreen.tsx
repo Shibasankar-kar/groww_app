@@ -1,5 +1,5 @@
 import {Image, StyleSheet, View, useColorScheme} from 'react-native';
-import React,{FC} from 'react';
+import React, {FC} from 'react';
 import CustomSafeAreaView from '../../components/global/CustomSafeAreaView';
 import CustomText from '../../components/global/CustomText';
 import {FONTS} from '../../constants/Fonts';
@@ -17,7 +17,7 @@ import {ButtomText} from '../../components/auth/ButtomText';
 import {signinwithgoogle} from '../../redux/SocialLogin';
 import {navigate} from '../../utils/NavigationUtil';
 
-const LoginScreen:FC = () => {
+const LoginScreen: FC = () => {
   const theme = useCustomTheme();
   return (
     <CustomSafeAreaView>
